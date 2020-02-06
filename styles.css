@@ -1,0 +1,249 @@
+:root {
+    --color-main: #202020;
+    --color-secondary: #e25050;
+    --color-secondary-dark: #bd4141;
+    --color-text-header: #202020;
+    --color-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before {
+    box-sizing: border-box;
+}
+
+*:after {
+    box-sizing: border-box;
+}
+
+input, button, select, textarea {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+body {
+    background-size: 100%;
+    font-family: 'Helvetica', sans-serif;
+    color: black;
+    background-color: var(--color-main);
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.navigation {
+    
+    padding: 3rem 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__brand {
+    text-decoration: none;
+    margin-right: auto;
+    font-size: 2.4rem;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.navigation__sections {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__section {
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+}
+.navigation__section--active {
+    background-color: var(--color-secondary);
+}
+
+.hero {
+    height: 80rem;
+    background-image: url('./assets/slide2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero__contact {
+    display: flex;
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
+
+}
+.icon-wrapper {
+    height: 100%;
+    width: 2.4rem;
+}
+
+.hero__phone-icon {
+    background-color: var(--color-secondary-dark);
+    padding: 0.8rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.hero__phone-number {
+    padding: 1rem 3rem;
+    background-color: var(--color-secondary);
+    font-size: 1.4rem;
+}
+
+.hero__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero__subtitle {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    background-color: var(--color-secondary);
+    padding: 2rem;
+}
+
+.hero__title {
+    color: var(--color-white);
+    font-size: 3rem;
+    background-color: var(--color-main);
+    padding: 2rem;
+}
+.hero__description {
+    color: var(--color-white);
+    font-size: 1.8rem;
+    background-color: var(--color-main);
+    padding: 2rem;
+}
+.content {
+    background-image: url('./assets/base.png');
+}
+.content__wrapper {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__title {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.content__title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 1px;
+    background-color: var(--color-white);
+}
+
+.trainers {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.trainer {
+    position: relative;
+    flex-basis: 25%;
+    height: 38rem;
+    padding: 0 2rem;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+
+}
+
+.trainer:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.trainer__front, .trainer__back {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.trainer__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trainer__back {
+    padding: 4rem;
+    background-color: var(--color-white);
+    transform: rotateY(180deg);
+}
+
+
+.trainer__info {
+    padding: 4rem;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.trainer__personal {
+    margin-bottom: 1.5rem;
+}
+
+.trainer__name {
+    font-size: 1.4rem;
+    color: var(--color-main);
+    margin-bottom: 0.4rem;
+}
+
+.trainer__name {
+    font-size: 1.2rem;
+    color: lightgrey;
+    font-weight: 700;
+}
